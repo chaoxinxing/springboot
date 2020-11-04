@@ -26,6 +26,7 @@ public class UserController {
 
     @RequestMapping("/")
     public String index(){
+        System.out.println("to index.html");
         return "index";
     }
 
