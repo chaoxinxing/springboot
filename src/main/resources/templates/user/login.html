@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.7.2.js"></script>
+    <title>万达影城登录页面</title>
+</head>
+<body>
+
+<div class="box" style="text-align: center">
+    <h2>请登录</h2>
+    <div class="form">
+        <form action="/user/login" method="post">
+            <label>手机号：</label>
+            <label>
+                <input id="phone" type="text" placeholder="请输入手机号"
+                       autocomplete="off" tabindex="1" name="phone" />
+            </label>
+            <br />
+            <br />
+            <label>用户密码：</label>
+            <label>
+                <input id="password" type="password" placeholder="请输入密码"
+                       autocomplete="off" tabindex="1" name="password" />
+            </label>
+            <br />
+            <br />
+            <a th:href="@{'userRegister'}" target="_self">立即注册</a>
+            <input type="submit" value="登录" id="sub_btn" />
+        </form>
+        <br />
+        <br />
+        <div id="alert" style="text-align: center; color: red" th:text="${msg}">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

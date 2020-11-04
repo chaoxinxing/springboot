@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>万达影城注册页面</title>
+
+</head>
+<body>
+<div style="text-align: center" >
+    <h2>欢迎注册万达影城</h2>
+    <div class="form">
+        <form action="/user/register" method="post">
+            <label>手机号：</label>
+            <label>
+                <input id="userPhone" type="text" placeholder="请输入手机号"
+                       autocomplete="off" tabindex="1" name="phone" />
+                <span id="phone_alert" style="color: red"></span>
+            </label>
+            <br />
+            <br />
+            <label>用户名：</label>
+            <label>
+                <input id="userName" type="text" placeholder="请输入用户名"
+                       autocomplete="off" tabindex="1" name="name" />
+                <span id="name_alert" style="color: red"></span>
+            </label>
+            <br />
+            <br />
+            <label>用户密码：</label>
+            <label>
+                <input  id="userPassword" type="password" placeholder="请输入密码"
+                       autocomplete="off" tabindex="1" name="password" />
+                <span id="password_alert" style="color: red"></span>
+            </label>
+            <br />
+            <br />
+            <label>确认密码：</label>
+            <label>
+                <input id="validate" type="password" placeholder="请确认密码"
+                       autocomplete="off" tabindex="1" name="rePassword" />
+                <span id="validate_alert" style="color: red"></span>
+            </label>
+            <br />
+            <br />
+            <input type="submit" value="注册" id="register" />
+        </form>
+        <br />
+        <br />
+        <div style="text-align: center; color: red" th:text="${msg}">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
