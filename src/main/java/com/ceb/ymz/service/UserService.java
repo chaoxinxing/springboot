@@ -9,6 +9,7 @@ import com.ceb.ymz.bean.User;
  * @Date 2020/11/3 10:39
  * @Version 1.0
  **/
+//service
 public interface UserService {
 
     public void register(User user);
