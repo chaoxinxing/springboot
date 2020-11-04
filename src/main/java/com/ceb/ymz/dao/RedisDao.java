@@ -11,6 +11,10 @@ import java.util.Map;
  * @Date 2020/11/3 10:40
  * @Version 1.0
  **/
+
+/**
+ * oaihfalca
+ */
 public interface RedisDao {
     /**
      * 新增hashmap值
